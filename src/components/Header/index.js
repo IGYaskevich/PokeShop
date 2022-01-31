@@ -6,6 +6,8 @@ import { ROUTES_NAMES } from "../../routes/routesNames";
 import { icon } from "../../static/icons/icons";
 import shoppingBasket from "../../static/images/happyPoke.png";
 import logo from "../../static/images/logo.png";
+import logOut from "../../static/images/pikachu.png";
+import avatar from "../../static/images/avatar.png";
 
 import mainContainer from "../../static/styles/mainContainer.module.scss";
 import style from "./styles.module.scss";
@@ -31,16 +33,21 @@ export const Header = () => {
           CONTACT
         </NavLink>
         <NavLink className={style.link} to={ROUTES_NAMES.SHOPPING_BASKET}>
-          <img className={style.logo} src={shoppingBasket} alt="basket" />
-          Count
+          {/*<img className={style.logo} src={shoppingBasket} alt="basket" />*/}
+          <div className={style.countBlock}>
+            <div className={style.count}>COUNT</div>
+            <div className={style.countProducts}> 10</div>
+          </div>
         </NavLink>
         {isAuth ? (
           <div className={style.login}>
             <NavLink to={ROUTES_NAMES.USER}>
-              <icon.FaceIcon fontSize={"large"} color={"secondary"} />
+              {/*<icon.FaceIcon fontSize={"large"} color={"secondary"} />*/}
+              <img className={style.icon} src={avatar} alt={"avatar"} />
             </NavLink>
             <NavLink to={ROUTES_NAMES.HOME}>
-              <icon.LogoutIcon fontSize={"large"} color={"secondary"} />
+              {/*<icon.LogoutIcon fontSize={"large"} color={"secondary"} />*/}
+              <img className={style.icon} src={logOut} alt={"avatar"} />
             </NavLink>
           </div>
         ) : (

@@ -15,9 +15,9 @@ import { UserPage } from "../pages/UserPage/containers";
 export const Router = () => {
   return (
     <Routes>
+      <Route path={ROUTES_NAMES.HOME} element={<HomePage />} />
       <Route path={ROUTES_NAMES.AUTHORIZATION} element={<Login />} />
       <Route path={ROUTES_NAMES.REGISTRATION} element={<Register />} />
-      <Route path={ROUTES_NAMES.HOME} element={<HomePage />} />
       <Route
         path={ROUTES_NAMES.POKEMON}
         element={
