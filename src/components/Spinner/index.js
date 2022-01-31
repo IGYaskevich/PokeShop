@@ -1,4 +1,3 @@
-import React from "react";
 import spinner from "../../static/images/spinner.png";
 import style from "./styles.module.scss";
 

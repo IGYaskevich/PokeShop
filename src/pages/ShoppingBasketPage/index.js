@@ -1,3 +1,5 @@
+import mainContainer from "../../static/styles/mainContainer.module.scss";
+
 export const ShoppingBasket = () => {
-  return <div>Shopping Basket</div>;
+  return <div className={mainContainer.container}>SHOPPING BASKET PAGE</div>;
 };

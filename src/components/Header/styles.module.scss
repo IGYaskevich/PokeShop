@@ -4,18 +4,36 @@
   justify-content: space-between;
   height: 100%;
   max-width: 1500px;
+
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+    //:hover {
+    //  transform: scale(1, 1.2);
+    //  background: black;
+    //}
+
+    .logo {
+      height: 90px;
+      padding: 10px;
+    }
+
+  }
+  .login{
+    position: relative;
+    text-align: end;
+    width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
-.logo{
-  height: 90px;
-  padding: 10px;
-}
-.link{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 100%;
- text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
+
+
+

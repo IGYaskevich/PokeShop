@@ -3,14 +3,15 @@
   justify-content: center;
   align-items: center;
   min-height: 500px;
+  margin: 20px;
 
   .paper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 350px;
-    width: 500px;
+    min-height: 350px;
+    min-width: 500px;
   }
 
   .authorizationForm {
@@ -19,6 +20,7 @@
     align-items: center;
     justify-content: center;
     width: 420px;
+    padding: 20px;
   }
 
   .textField {
@@ -29,5 +31,9 @@
 
   .button {
     margin: 20px 0 0;
+  }
+  .link{
+    width: 100%;
+    text-decoration: none;
   }
 }
