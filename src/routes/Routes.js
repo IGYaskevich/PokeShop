@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { ROUTES_NAMES } from "./routesNames";
 import { Login } from "../pages/LoginPage/containers";
-import { Register } from "../pages/RegisterPage/containers";
+import { Register } from "../pages/SingUpPage/containers";
 import { ShoppingBasket } from "../pages/ShoppingBasketPage";
 import { PokemonPageContainer } from "../pages/PokemonsPage/containers/PokemonPageContainer";
 import { PokemonDetailContainer } from "../pages/PokemonDetailPage/container/PokemonDetailContainer";
@@ -16,8 +16,8 @@ export const Router = () => {
   return (
     <Routes>
       <Route path={ROUTES_NAMES.HOME} element={<HomePage />} />
-      <Route path={ROUTES_NAMES.AUTHORIZATION} element={<Login />} />
-      <Route path={ROUTES_NAMES.REGISTRATION} element={<Register />} />
+      <Route path={ROUTES_NAMES.SING_IN} element={<Login />} />
+      <Route path={ROUTES_NAMES.SING_UP} element={<Register />} />
       <Route
         path={ROUTES_NAMES.POKEMON}
         element={

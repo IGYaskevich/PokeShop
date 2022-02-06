@@ -2,11 +2,18 @@ import axios from "axios";
 
 import { LOCAL_STORAGE_KEYS } from "../constants/localStorageKeys";
 
-const instance = axios.create({
+const config = {
   baseURL: `https://it-shatle-demo-api.herokuapp.com`,
-});
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+    Pragma: "no-cache",
+  },
+};
 
-instance.interceptors.request.use((axiosConfig) => {
+const api = axios.create(config);
+
+api.interceptors.request.use((axiosConfig) => {
   const accessToken = localStorage.getItem(LOCAL_STORAGE_KEYS.ACCESS_TOKEN);
 
   axiosConfig.headers.Authorization = `Bearer ${accessToken}`;
@@ -14,17 +21,4 @@ instance.interceptors.request.use((axiosConfig) => {
   return axiosConfig;
 });
 
-export const pokemonAPI = {
-  singUp(signData) {
-    return instance.post("auth/signup", signData);
-  },
-  singIn(authData) {
-    return instance.post("/auth/signIn", authData);
-  },
-  getPokemons() {
-    return instance.get(`/products`);
-  },
-  getPokemonDetails(id) {
-    return instance.get(`/products/${id}`);
-  },
-};
+export default api;

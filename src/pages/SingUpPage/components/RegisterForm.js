@@ -10,7 +10,8 @@ export const RegisterForm = ({ form }) => {
         className={validationStyle.authorizationForm}
         onSubmit={form.handleSubmit}
       >
-        <h1>REGISTER</h1>
+        <h1>CREATE NEW ACCOUNT</h1>
+
         <TextField
           className={validationStyle.textField}
           fullWidth
@@ -44,6 +45,7 @@ export const RegisterForm = ({ form }) => {
           error={form.touched.lastName && Boolean(form.errors.lastName)}
           helperText={form.touched.lastName && form.errors.lastName}
         />
+
         <TextField
           className={validationStyle.textField}
           fullWidth
@@ -58,7 +60,7 @@ export const RegisterForm = ({ form }) => {
         <TextField
           className={validationStyle.textField}
           fullWidth
-          id="password"
+          id="userPassword"
           name="password"
           label="Password"
           type="password"
@@ -78,6 +80,53 @@ export const RegisterForm = ({ form }) => {
           error={form.touched.phone && Boolean(form.errors.phone)}
           helperText={form.touched.phone && form.errors.phone}
         />
+        <div className={validationStyle.addressContainer}>
+          <div className={validationStyle.address}>
+            <TextField
+              className={validationStyle.addressStyle}
+              id="country"
+              name="country"
+              label={"country"}
+              type="text"
+              value={form.values.country}
+              onChange={form.handleChange}
+              placeholder="Country"
+            />
+
+            <TextField
+              className={validationStyle.addressStyle}
+              id="city"
+              name="city"
+              label={"city"}
+              type="text"
+              value={form.values.city}
+              onChange={form.handleChange}
+              placeholder="City"
+            />
+          </div>
+          <TextField
+            className={validationStyle.addressLine}
+            id="addressLine"
+            name="addressLine"
+            label={"addressLine"}
+            type="text"
+            value={form.values.addressLine1}
+            onChange={form.handleChange}
+            placeholder="Address line"
+            fullWidth
+          />
+          <TextField
+            className={validationStyle.addressLine}
+            id="addressLine2"
+            name="addressLine2"
+            label={"addressLine2"}
+            type="text"
+            placeholder="Address line"
+            value={form.values.addressLine2}
+            onChange={form.handleChange}
+            fullWidth
+          />
+        </div>
         <Button
           className={validationStyle.button}
           color="primary"

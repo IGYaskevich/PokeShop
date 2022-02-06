@@ -1,7 +1,7 @@
 export const ROUTES_NAMES = {
   HOME: "/",
-  AUTHORIZATION: "/authorization",
-  REGISTRATION: "/registration",
+  SING_IN: "/sing-in",
+  SING_UP: "/sing-up",
   SHOPPING_BASKET: "/shopping-basket",
   POKEMON: "/pokemon",
   POKEMON_DETAIL: "/pokemon/:pokemonName",

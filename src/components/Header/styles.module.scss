@@ -14,14 +14,10 @@
     text-decoration: none;
     color: #2b2929;
     font-weight: bold;
+    transition: 1s ease;
 
     .countBlock {
       position: relative;
-
-      .count {
-
-
-      }
 
       .countProducts {
         position: absolute;
@@ -49,14 +45,9 @@
       height: 90px;
       padding: 10px;
     }
-
   }
 
   .login {
-    //position: relative;
-    //text-align: end;
-    //width: 100px;
-
     display: flex;
     justify-content: space-evenly;
 

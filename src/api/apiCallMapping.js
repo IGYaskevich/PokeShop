@@ -1,7 +1,7 @@
 import * as pokemonPageActions from "../pages/PokemonsPage/actions/actions";
 import * as pokemonDetailsAction from "../pages/PokemonDetailPage/actions/actions";
 import * as loginActions from "../pages/LoginPage/actions";
-import * as redisterActions from "../pages/RegisterPage/actions";
+import * as redisterActions from "../pages/SingUpPage/actions";
 
 import PokemonService from "../services/pokemonService";
 import AuthService from "../services/authService";

@@ -1,5 +1,6 @@
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 500px;
@@ -29,11 +30,40 @@
     margin: 5px 0;
   }
 
+  .addressContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+
+    .address {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      .addressStyle {
+        width: 170px;
+      }
+    }
+
+    .addressLine {
+      margin-top: 10px;
+    }
+  }
+
   .button {
     margin: 20px 0 0;
   }
-  .link{
+
+  .link {
     width: 100%;
     text-decoration: none;
+  }
+
+  .error {
+    width: 100%;
+    margin: 0 0 10px;
   }
 }

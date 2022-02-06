@@ -1,13 +1,13 @@
-import { pokemonAPI } from "../api/config";
+import api from "../api/config";
 
 class PokemonService {
   static instance = new PokemonService();
   getPokemon() {
-    return pokemonAPI.getPokemons();
+    return api.get(`/products`);
   }
 
   getPokemonDetails(pokemonID) {
-    return pokemonAPI.getPokemonDetails(pokemonID);
+    return api.get(`/products/${pokemonID}`);
   }
 }
 export default PokemonService.instance;

@@ -1,13 +1,13 @@
-import { pokemonAPI } from "../api/config";
+import api from "../api/config";
 
 class AuthService {
   static instance = new AuthService();
   signUp(singData) {
-    return pokemonAPI.singUp(singData);
+    return api.post("auth/signup", singData);
   }
   signIn({ email, password }) {
     const authData = { email, password };
-    return pokemonAPI.singIn(authData);
+    return api.post("/auth/signIn", authData);
   }
 }
 

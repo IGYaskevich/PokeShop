@@ -17,20 +17,23 @@ export const registerValidationSchema = yup.object({
     .string("Enter your last name")
     .min(2, "Name should be of minimum 2 characters length")
     .required("Last name is required"),
-  gender: yup
-    .string("Enter gender male or female")
-    .min(4, "Enter gender male or female")
-    .required("Gender is required"),
+  gender: yup.string("Enter gender male or female"),
+  // .min(4, "Enter gender male or female")
+  // .required("Gender is required"),
   phone: yup
     .string("Enter your phone")
     .min(10, "Enter your phone")
     .required("Phone is required"),
+  country: yup.string().typeError("Should be a string"),
+  city: yup.string().typeError("Should be a string"),
+  addressLine1: yup.string().typeError("Should be a string"),
+  addressLine2: yup.string().typeError("Should be a string"),
 });
 
 export const loginValidationSchema = yup.object({
   email: yup
     .string("Enter your email")
-    .email("Enter a valid email")
+    .email("Email must be an email")
     .required("Email is required"),
   password: yup
     .string("Enter your password")

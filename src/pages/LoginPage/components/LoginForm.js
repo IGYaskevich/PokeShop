@@ -1,9 +1,11 @@
+import { NavLink } from "react-router-dom";
+
+import { ROUTES_NAMES } from "../../../routes/routesNames";
+
 import Paper from "@mui/material/Paper";
 import { Button, TextField } from "@material-ui/core";
 
 import validationStyle from "../../../static/styles/validation.module.scss";
-import { NavLink } from "react-router-dom";
-import { ROUTES_NAMES } from "../../../routes/routesNames";
 
 export const LoginForm = ({ form }) => {
   return (
@@ -13,7 +15,6 @@ export const LoginForm = ({ form }) => {
         onSubmit={form.handleSubmit}
       >
         <h1>SIGN IN</h1>
-
         <TextField
           className={validationStyle.textField}
           fullWidth
@@ -42,23 +43,15 @@ export const LoginForm = ({ form }) => {
           color="primary"
           variant="contained"
           fullWidth
+          disabled={!form.values.password || !form.values.email}
           type="submit"
         >
           Log in
         </Button>
-        <NavLink
-          className={validationStyle.link}
-          to={ROUTES_NAMES.REGISTRATION}
-        >
-          <Button
-            className={validationStyle.button}
-            color="primary"
-            variant="contained"
-            fullWidth
-          >
-            REGISTER
-          </Button>
-        </NavLink>
+        <div className={validationStyle.button}>
+          Don't have an account?
+          <NavLink to={ROUTES_NAMES.SING_UP}>SING UP</NavLink>
+        </div>
       </form>
     </Paper>
   );
