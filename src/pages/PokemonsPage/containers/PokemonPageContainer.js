@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { pokemonPageSelector } from "../selectors/selectors";
 import * as actions from "../actions/actions";
 
-import { ROUTES_NAMES } from "../../../routes/routesNames";
-import { Link } from "react-router-dom";
+import { PokemonItem } from "../components/PokemonItem";
 import { Spinner } from "../../../components/Spinner";
 
 import mainContainer from "../../../static/styles/mainContainer.module.scss";
+import style from "./styles.module.scss";
 
 export const PokemonPageContainer = () => {
   const dispatch = useDispatch();
@@ -17,17 +17,24 @@ export const PokemonPageContainer = () => {
   useEffect(() => {
     dispatch(actions.GET_POKEMON_REQUEST());
   }, [dispatch]);
+
   return (
     <div className={mainContainer.container}>
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        pokemonList.map(({ name, id }) => (
-          <Link to={`${ROUTES_NAMES.POKEMON}/${id}`} key={id}>
-            <div>{name}</div>
-          </Link>
-        ))
-      )}
+      <div className={style.content}>
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          pokemonList.map(({ name, image, price, id }) => (
+            <PokemonItem
+              name={name}
+              image={image}
+              price={price}
+              id={id}
+              key={id}
+            />
+          ))
+        )}
+      </div>
     </div>
   );
 };

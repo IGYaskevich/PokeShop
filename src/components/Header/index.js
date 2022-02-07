@@ -19,7 +19,7 @@ export const Header = () => {
         </NavLink>
 
         <NavLink className={style.link} to={ROUTES_NAMES.POKEMON}>
-          POKEMON SHOP
+          SHOP
         </NavLink>
 
         <NavLink className={style.link} to={ROUTES_NAMES.ABOUT_US}>
