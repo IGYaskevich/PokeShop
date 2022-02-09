@@ -1,6 +1,7 @@
 import axios from "axios";
 
 import { LOCAL_STORAGE_KEYS } from "../constants/localStorageKeys";
+import AuthService from "../services/authService";
 
 const config = {
   baseURL: `https://it-shatle-demo-api.herokuapp.com`,
@@ -20,5 +21,17 @@ api.interceptors.request.use((axiosConfig) => {
 
   return axiosConfig;
 });
+
+api.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (error) => {
+    if (error.response.status === 401) {
+      AuthService.signOut();
+    }
+    return error;
+  }
+);
 
 export default api;

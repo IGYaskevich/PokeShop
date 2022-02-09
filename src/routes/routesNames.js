@@ -1,5 +1,5 @@
 export const ROUTES_NAMES = {
-  HOME: "/",
+  HOME: "/PokeShop",
   SING_IN: "/sing-in",
   SING_UP: "/sing-up",
   SHOPPING_BASKET: "/shopping-basket",

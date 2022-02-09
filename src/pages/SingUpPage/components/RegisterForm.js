@@ -68,6 +68,7 @@ export const RegisterForm = ({ form }) => {
           onChange={form.handleChange}
           error={form.touched.password && Boolean(form.errors.password)}
           helperText={form.touched.password && form.errors.password}
+          autoComplete="off"
         />
         <TextField
           className={validationStyle.textField}

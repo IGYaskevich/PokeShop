@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 10px;
+  align-items: center;
+  width: 500px;
+  min-height: 550px;
+
+  .pokemonDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+
+    .image {
+      padding: 10px;
+    }
+
+    .name {
+      text-align: center;
+      padding: 10px;
+      color: #2b2929;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+  }
+
+  .pokemonStats {
+    width: 90%;
+    display: flex;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .price {
+      text-align: center;
+      font-size: 24px;
+      padding: 10px;
+    }
+  }
+}
