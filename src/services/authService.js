@@ -9,6 +9,10 @@ class AuthService {
     const authData = { email, password };
     return api.post("/auth/signIn", authData);
   }
+  signOut() {
+    localStorage.clear();
+    window.location.reload();
+  }
 }
 
 export default AuthService.instance;

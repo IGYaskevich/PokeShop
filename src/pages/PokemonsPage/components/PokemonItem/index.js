@@ -1,4 +1,6 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
+
 import { ButtonGroups } from "../../../../components/ButtonGroup";
 
 import { ROUTES_NAMES } from "../../../../routes/routesNames";
@@ -6,7 +8,6 @@ import { ROUTES_NAMES } from "../../../../routes/routesNames";
 import { Paper } from "@mui/material";
 
 import style from "./styles.module.scss";
-import { memo } from "react";
 
 export const PokemonItem = memo(({ name, image, price, id }) => {
   return (

@@ -31,34 +31,18 @@
   .pokemonStats {
     width: 90%;
     display: flex;
+  }
 
-    .stats {
-      width: 50%;
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-      .title {
-        width: 100%;
-        text-align: center;
-      }
-
-      .stat {
-        font-size: 16px;
-        font-weight: bold;
-        padding: 0 0 10px 0;
-      }
-    }
-
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-
-      .price {
-        text-align: center;
-        font-size: 24px;
-        padding: 10px;
-      }
+    .price {
+      text-align: center;
+      font-size: 24px;
+      padding: 10px;
     }
   }
 }

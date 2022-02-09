@@ -3,14 +3,16 @@ import { authSelector } from "../../pages/LoginPage/selectors";
 import { NavLink } from "react-router-dom";
 import { ROUTES_NAMES } from "../../routes/routesNames";
 
-import { icon } from "../../static/rootImage/icons";
+import { icon } from "../../static/MaterialUI/icons";
 import { image } from "../../static/rootImage/images";
 
 import mainContainer from "../../static/styles/mainContainer.module.scss";
 import style from "./styles.module.scss";
+import AuthService from "../../services/authService";
 
 export const Header = () => {
   const { isAuth } = useSelector(authSelector);
+
   return (
     <div className={mainContainer.container}>
       <div className={style.content}>
@@ -56,7 +58,7 @@ export const Header = () => {
                 className={style.icon}
                 src={image.logOut}
                 alt={"loginOut"}
-                onClick={() => localStorage.clear()}
+                onClick={() => AuthService.signOut()}
               />
             </NavLink>
           </div>

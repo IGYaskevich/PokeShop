@@ -1,40 +1,37 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { pokemonPageSelector } from "../selectors/selectors";
+
+import { Spinner } from "../../../components/Spinner";
+import { PokemonLayout } from "../components/PokemonLayout";
+import { usePagination } from "../../../hooks";
+
 import * as actions from "../actions/actions";
 
-import { PokemonItem } from "../components/PokemonItem";
-import { Spinner } from "../../../components/Spinner";
-
 import mainContainer from "../../../static/styles/mainContainer.module.scss";
-import style from "./styles.module.scss";
 
 export const PokemonPageContainer = () => {
   const dispatch = useDispatch();
 
+  const [page, handlePageChange] = usePagination("pokemonPage");
+
   const { pokemonList, isLoading } = useSelector(pokemonPageSelector);
 
   useEffect(() => {
-    dispatch(actions.GET_POKEMON_REQUEST());
-  }, [dispatch]);
+    dispatch(actions.GET_POKEMON_REQUEST(page));
+  }, [dispatch, page]);
 
   return (
     <div className={mainContainer.container}>
-      <div className={style.content}>
-        {isLoading ? (
-          <Spinner />
-        ) : (
-          pokemonList.map(({ name, image, price, id }) => (
-            <PokemonItem
-              name={name}
-              image={image}
-              price={price}
-              id={id}
-              key={id}
-            />
-          ))
-        )}
-      </div>
+      {pokemonList && isLoading ? (
+        <Spinner />
+      ) : (
+        <PokemonLayout
+          pokemonList={pokemonList}
+          page={page}
+          handlePageChange={handlePageChange}
+        />
+      )}
     </div>
   );
 };

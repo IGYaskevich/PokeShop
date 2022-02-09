@@ -1,11 +1,12 @@
+import { memo } from "react";
+
 import { ButtonGroups } from "../../../../components/ButtonGroup";
 import { Abilities } from "../Abilities";
+
 import { Stats } from "../Stats";
 
 import Paper from "@mui/material/Paper";
-
 import style from "./styles.module.scss";
-import { memo } from "react";
 
 export const PokemonDetailItem = memo(
   ({ abilities, image, name, price, stats }) => {
@@ -20,13 +21,11 @@ export const PokemonDetailItem = memo(
 
         {<Abilities abilities={abilities} name={name} />}
 
-        <div className={style.pokemonStats}>
-          {<Stats stats={stats} />}
+        <div className={style.pokemonStats}>{<Stats stats={stats} />}</div>
 
-          <div className={style.buttons}>
-            <div className={style.price}>price: {price}$</div>
-            <ButtonGroups />
-          </div>
+        <div className={style.buttons}>
+          <div className={style.price}>price: {price}$</div>
+          <ButtonGroups />
         </div>
       </Paper>
     );
