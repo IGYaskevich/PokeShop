@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/PokeShop/static/css/main.52f22f05.css",
-    "main.js": "/PokeShop/static/js/main.a9303f9a.js",
+    "main.css": "/PokeShop/static/css/main.5ca4908c.css",
+    "main.js": "/PokeShop/static/js/main.1185c804.js",
     "static/media/logo.png": "/PokeShop/static/media/logo.c8e5f5413616d2d8709c.png",
+    "static/media/slash.png": "/PokeShop/static/media/slash.6a2ba09af34cb24a84c9.png",
+    "static/media/pokemon.png": "/PokeShop/static/media/pokemon.131e0c18c031eabf3cab.png",
+    "static/media/heart.png": "/PokeShop/static/media/heart.afc548eced3050c569ba.png",
+    "static/media/defenseSec.png": "/PokeShop/static/media/defenseSec.338b106340ed3510f2da.png",
     "static/media/avatar.png": "/PokeShop/static/media/avatar.cb81c8c0d7c92787bb35.png",
     "static/media/pikachu.png": "/PokeShop/static/media/pikachu.a127b470329d130a1343.png",
+    "static/media/fist.png": "/PokeShop/static/media/fist.c682bdb15e5f3b10c0a4.png",
+    "static/media/energetic.png": "/PokeShop/static/media/energetic.e6a72fc921e4e4c7b252.png",
     "index.html": "/PokeShop/index.html",
-    "main.52f22f05.css.map": "/PokeShop/static/css/main.52f22f05.css.map",
-    "main.a9303f9a.js.map": "/PokeShop/static/js/main.a9303f9a.js.map"
+    "main.5ca4908c.css.map": "/PokeShop/static/css/main.5ca4908c.css.map",
+    "main.1185c804.js.map": "/PokeShop/static/js/main.1185c804.js.map"
   },
   "entrypoints": [
-    "static/css/main.52f22f05.css",
-    "static/js/main.a9303f9a.js"
+    "static/css/main.5ca4908c.css",
+    "static/js/main.1185c804.js"
   ]
 }
