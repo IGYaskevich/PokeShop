@@ -23,6 +23,9 @@
       color: #2b2929;
     }
 
+    .buttons {
+      text-align: center;
+    }
   }
 
   .pokemonStats {
@@ -31,7 +34,6 @@
   }
 
   .buttons {
-    padding: 0 0 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
