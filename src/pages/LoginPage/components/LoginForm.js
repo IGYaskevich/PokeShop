@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { ROUTES_NAMES } from "../../../routes/routesNames";
 
 import { Button, TextField } from "@material-ui/core";
-import { Box, Paper } from "@mui/material";
+import { Box, FormControl, IconButton, Input, InputAdornment, InputLabel, Paper } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 import validationStyle from "../../../static/styles/validation.module.scss";
@@ -14,6 +14,7 @@ export const LoginForm = ({ form }) => {
   const [value, setValue] = useState(false);
 
   const handleClickShowPassword = useCallback(() => setValue(!value), [value]);
+
 
   return (
     <Paper className={validationStyle.paper} elevation={5}>
@@ -34,8 +35,10 @@ export const LoginForm = ({ form }) => {
             helperText={form.touched.email && form.errors.email}
           />
         </Box>
-        <Box className={validationStyle.textField}>
-          <TextField
+        
+        <FormControl className={validationStyle.textField} sx={{ m: 1, width: "25ch" }} variant="standard">
+          <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+          <Input
             fullWidth
             id="password"
             name="password"
@@ -46,11 +49,19 @@ export const LoginForm = ({ form }) => {
             error={form.touched.password && Boolean(form.errors.password)}
             helperText={form.touched.password && form.errors.password}
             autoComplete="off"
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  // onMouseDown={handleMouseDownPassword}
+                >
+                  {form.values.password ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
           />
-          <div onClick={handleClickShowPassword}>
-            {value ? <VisibilityOff /> : <Visibility />}
-          </div>
-        </Box>
+        </FormControl>
         <Button
           className={validationStyle.button}
           color="primary"
