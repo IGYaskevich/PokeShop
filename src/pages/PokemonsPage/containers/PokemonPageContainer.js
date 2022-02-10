@@ -14,7 +14,7 @@ export const PokemonPageContainer = () => {
   const dispatch = useDispatch();
 
   const [page, handlePageChange] = usePagination("pokemonPage");
-
+  console.log(page);
   const { pokemonList, isLoading } = useSelector(pokemonPageSelector);
 
   useEffect(() => {
