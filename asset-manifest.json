@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PokeShop/static/css/main.e196fb33.css",
-    "main.js": "/PokeShop/static/js/main.a12723fe.js",
+    "main.js": "/PokeShop/static/js/main.3e6b5b50.js",
     "static/media/logo.png": "/PokeShop/static/media/logo.c8e5f5413616d2d8709c.png",
     "static/media/slash.png": "/PokeShop/static/media/slash.6a2ba09af34cb24a84c9.png",
     "static/media/pokemon.png": "/PokeShop/static/media/pokemon.131e0c18c031eabf3cab.png",
@@ -13,10 +13,10 @@
     "static/media/energetic.png": "/PokeShop/static/media/energetic.e6a72fc921e4e4c7b252.png",
     "index.html": "/PokeShop/index.html",
     "main.e196fb33.css.map": "/PokeShop/static/css/main.e196fb33.css.map",
-    "main.a12723fe.js.map": "/PokeShop/static/js/main.a12723fe.js.map"
+    "main.3e6b5b50.js.map": "/PokeShop/static/js/main.3e6b5b50.js.map"
   },
   "entrypoints": [
     "static/css/main.e196fb33.css",
-    "static/js/main.a12723fe.js"
+    "static/js/main.3e6b5b50.js"
   ]
 }
