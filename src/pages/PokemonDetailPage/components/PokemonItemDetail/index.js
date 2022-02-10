@@ -24,8 +24,10 @@ export const PokemonDetailItem = memo(
         <div className={style.pokemonStats}>{<Stats stats={stats} />}</div>
 
         <div className={style.buttons}>
+
           <div className={style.price}>price: {price}$</div>
           <ButtonGroups />
+
         </div>
       </Paper>
     );
