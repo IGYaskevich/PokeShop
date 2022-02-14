@@ -1,6 +1,8 @@
 import { Paper } from "@mui/material";
+
+import emptyCart from "../../../../static/images/empty-cart.png";
+
 import style from "./styles.module.scss";
-import emptyCart from "../../../static/images/empty-cart.png";
 
 export const EmptyCart = () => {
   return (

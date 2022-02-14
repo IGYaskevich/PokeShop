@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  max-width: 1300px;
+  width: 100%;
+  min-height: 550px;
+  height: 100%;
+  padding: 10px;
+
+  .content {
+    max-width: 900px;
+    min-height: 500px;
+    width: 100%;
+    padding: 5px;
+    
+  }
+  .cartManager {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+}
