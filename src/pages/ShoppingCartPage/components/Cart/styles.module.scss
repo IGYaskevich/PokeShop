@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  max-width: 1300px;
+  width: 100%;
+  min-height: 550px;
+  height: 100%;
+  padding: 10px;
+
+  .content {
+    max-width: 900px;
+    min-height: 500px;
+    width: 100%;
+
+    border: 1px solid;
+  }
+
+  .headerCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .cartImg {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+    }
+  }
+  .order{
+    width: 100%;
+    height: 70px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid;
+  }
+}

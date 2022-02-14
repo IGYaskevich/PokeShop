@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { ROUTES_NAMES } from "./routesNames";
 import { Login } from "../pages/LoginPage/containers";
 import { Register } from "../pages/SingUpPage/containers";
-import { ShoppingBasket } from "../pages/ShoppingBasketPage/container";
+import { ShoppingCart } from "../pages/ShoppingCartPage/container";
 import { PokemonPageContainer } from "../pages/PokemonsPage/containers/PokemonPageContainer";
 import { PokemonDetailContainer } from "../pages/PokemonDetailPage/container/PokemonDetailContainer";
 import { PrivateRoute } from "./PrivateRoute";
@@ -62,7 +62,7 @@ export const Router = () => {
         path={ROUTES_NAMES.SHOPPING_BASKET}
         element={
           <PrivateRoute>
-            <ShoppingBasket />
+            <ShoppingCart />
           </PrivateRoute>
         }
       />
