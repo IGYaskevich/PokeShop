@@ -1,11 +1,10 @@
 import { memo } from "react";
 
 import { PokemonItem } from "../PokemonItem";
-import { Paginate } from "../../../../components/Pagination";
 
 import style from "./styles.module.scss";
 
-export const PokemonLayout = memo(({ pokemonList, page, handlePageChange }) => {
+export const PokemonLayout = memo(({ pokemonList}) => {
   return (
     <div className={style.container}>
       <div className={style.content}>
@@ -19,7 +18,6 @@ export const PokemonLayout = memo(({ pokemonList, page, handlePageChange }) => {
           />
         ))}
       </div>
-      <Paginate currentPage={page} onPageChange={handlePageChange} />
     </div>
   );
 });

@@ -3,7 +3,7 @@ import { memo } from "react";
 
 import style from "./styles.module.scss";
 
-export const Paginate = memo(({ currentPage, pageAmount, onPageChange }) => {
+export const Paginate = memo(({ currentPage, onPageChange }) => {
   return (
     <div className={style.container}>
       <Stack spacing={2}>
