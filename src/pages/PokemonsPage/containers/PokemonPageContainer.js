@@ -9,6 +9,7 @@ import { usePagination } from "../../../hooks";
 import * as actions from "../actions/actions";
 
 import mainContainer from "../../../static/styles/mainContainer.module.scss";
+import { Paginate } from "../../../components/Pagination";
 
 export const PokemonPageContainer = () => {
   const dispatch = useDispatch();
@@ -32,6 +33,9 @@ export const PokemonPageContainer = () => {
           handlePageChange={handlePageChange}
         />
       )}
+      <div className={mainContainer.paginate}>
+        <Paginate currentPage={page} onPageChange={handlePageChange} />
+      </div>
     </div>
   );
 };

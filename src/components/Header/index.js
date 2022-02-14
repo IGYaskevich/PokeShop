@@ -6,15 +6,15 @@ import { ROUTES_NAMES } from "../../routes/routesNames";
 import { icon } from "../../static/MaterialUI/icons";
 import { image } from "../../static/rootImage/images";
 
-import mainContainer from "../../static/styles/mainContainer.module.scss";
-import style from "./styles.module.scss";
 import AuthService from "../../services/authService";
+
+import style from "./styles.module.scss";
 
 export const Header = () => {
   const { isAuth } = useSelector(authSelector);
 
   return (
-    <div className={mainContainer.container}>
+    <div className={style.container}>
       <div className={style.content}>
         <NavLink className={style.link} to={ROUTES_NAMES.HOME}>
           <img className={style.logo} src={image.logo} alt="logo" />
